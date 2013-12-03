@@ -1,7 +1,7 @@
 #
 # controller run list requirements
 #
-default[:controller][:includes] = [] 
+default[:controller][:includes] = []
 
 # selinux permissive when on rhelish things
 
