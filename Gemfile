@@ -4,17 +4,13 @@ source  'https://rubygems.org'
 gem 'berkshelf'
 
 group "develop" do
-  gem 'test-kitchen',
-    :git => "git://github.com/opscode/test-kitchen.git"
-  gem 'kitchen-all'
+  gem 'test-kitchen', '~> 1.0.0'
+  gem 'kitchen-vagrant'
+  gem 'kitchen-lxc'
   gem 'busser-bats'
   gem 'busser-serverspec'
   gem 'foodcritic'
   gem 'tailor'
   gem 'cane'
-  gem 'guard'
-  gem 'guard-rake'
-  gem 'guard-kitchen'
-  gem 'knife-cookbook-doc'
-  gem 'chefspec', ">= 3.0.0"
+  gem 'chefspec'
 end
