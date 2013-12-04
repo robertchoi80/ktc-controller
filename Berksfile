@@ -1,14 +1,17 @@
 #
 # vim: set ft=ruby:
 #
+#chef_api :config
+chef_api "https://chefdev.mkd2.ktc", node_name: "cookbook", client_key: ".cookbook.pem"
+
 site :opscode
 
 metadata
 
-# solo-search for intgration tests
-group :integration do
-  cookbook 'chef-solo-search', github: 'edelight/chef-solo-search'
-
-# add in a test cook for minitest or to twiddle an LWRP
-#  cookbook 'my_cook_test', :path => './test/cookbooks/my_cook_test'
+group "integration" do
+  cookbook 'ktc-testing'
+  cookbook 'etcd'
+  cookbook 'ktc-database'
+  cookbook 'ktc-memcached'
+  cookbook 'ktc-messaging'
 end
