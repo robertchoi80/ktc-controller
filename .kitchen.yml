@@ -16,7 +16,7 @@ platforms:
     box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.4.4.box
 
 suites:
-- name: other 
+- name: control
   run_list:
     - recipe[ktc-testing]
     - recipe[etcd::compile_time]
@@ -24,7 +24,6 @@ suites:
     - recipe[ktc-database]
     - recipe[ktc-messaging]
     - recipe[ktc-memcached]
-    - recipe[ktc-identity]
     - recipe[ktc-controller]
   attributes:
     etcd:
@@ -43,6 +42,7 @@ suites:
       developer_mode: true
       compute:
         driver: 'fake.FakeDriver'
+        identity_service_chef_role: 'ktc-controller'
       endpoints:
         compute-metadata-api:
           host: 'xxx.xxx.xxx.xxx'
