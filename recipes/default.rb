@@ -4,7 +4,6 @@
 #
 # something new
 
-
 # include recipes from our run_list attribute
 #
 node[:controller][:includes].each do |recipe|
