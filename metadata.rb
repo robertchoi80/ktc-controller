@@ -1,5 +1,5 @@
 name    'ktc-controller'
-version '1.0.3'
+version '1.0.4'
 %w{ centos ubuntu }.each do |os|
   supports os
 end
