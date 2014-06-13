@@ -13,6 +13,6 @@ default[:controller][:includes].concat %w{
  ktc-identity
  ktc-block-storage
  ktc-network
- ktc-compute::compute-api
+ ktc-compute::compute_api
  ktc-dashboard
 }
