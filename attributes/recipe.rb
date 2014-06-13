@@ -9,10 +9,10 @@ default[:controller][:includes] = []
 
 # selinux permissive when on rhelish things
 
-default[:controller][:includes].concat %w{
- ktc-identity
- ktc-block-storage
- ktc-network
- ktc-compute::compute_api
- ktc-dashboard
-}
+default[:controller][:includes].concat %w(
+  ktc-identity
+  ktc-block-storage
+  ktc-network
+  ktc-compute::compute_api
+  ktc-dashboard
+)
